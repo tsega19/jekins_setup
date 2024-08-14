@@ -30,3 +30,10 @@ EXPOSE 85
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
+
+# $ docker run -d -p 5000:5000 --name local-registry registry:2
+# Verify the status of the container.
+
+# $ docker container ls
+# CONTAINER ID   IMAGE           COMMAND                     CREATED   STATUS                        PORTS             NAMES
+# 5da2f5c25843   registry:2   "/entrypoint.sh /etc…"   7 minutes ago   Up 7 minutes   0.0.0.0:5000->5000/tcp   local-registry
