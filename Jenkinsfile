@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script {
                     // Install dependencies and build the React application
-                    sh 'npm install'
-                    sh 'npm run build'
+                    bat 'npm install'
+                    bat 'npm run build'
                 }
             }
         }
@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                     // Remove the Docker image from the Jenkins server to save space
-                    sh "docker rmi ${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
+                    bat "docker rmi ${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
                 }
             }
         }
